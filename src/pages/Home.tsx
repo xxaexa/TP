@@ -14,7 +14,6 @@ import motif from "./../assets/banner/motif.png";
 import qr from "./../assets/icons/qr.png";
 
 const Home = () => {
-  // Inisialisasi user dengan nilai default yang sesuai dengan tipe AccountResponse
   const { data: user = {} as AccountResponse, isLoading } =
     useGetAccountQuery();
 
@@ -33,13 +32,13 @@ const Home = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div>
-          <div className="relative min-h-[220px]">
+        <div className="block md:flex">
+          <div className="relative min-h-[220px] md:w-1/2">
             <img src={motif} alt="motif" className="w-full h-full" />
             <HomeBox onClick={handleOpenPopup} photo={qr} user={user} />
           </div>
 
-          <div className="bg-white relative pb-12">
+          <div className="bg-white relative pb-12 md:w-1/2">
             <Slick user={user} />
             <div className="absolute bottom-4 right-4">
               <MediumText text={"View All"} className="text-green-400" />

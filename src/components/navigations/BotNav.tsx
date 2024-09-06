@@ -53,7 +53,7 @@ const BotNav = () => {
         <img src={activePage === "menu" ? menu1 : menu2} className="w-[25px]" />
         <SmallText
           className={activePage === "home" ? "text-black" : "text-gray-500"}
-          text={"Home"}
+          text={"Menu"}
         />
       </div>
     </div>
